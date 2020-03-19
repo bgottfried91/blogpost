@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: null
+  labels:
+    app: httpd
+  name: httpd
+  selfLink: /apis/route.openshift.io/v1/namespaces/bgottfri/routes/httpd
+spec:
+  host: httpd-bgottfri.apps.cluster-1234-0007.1234-0007.example.opentlc.com
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: httpd
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+      - status: 'True'
+        type: Admitted

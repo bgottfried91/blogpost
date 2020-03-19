@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: ""
+    openshift.io/display-name: ""
+    openshift.io/requester: bgottfri
+    openshift.io/sa.scc.mcs: s0:c24,c14
+    openshift.io/sa.scc.supplemental-groups: 1000580000/10000
+    openshift.io/sa.scc.uid-range: 1000580000/10000
+  creationTimestamp: null
+  name: bgottfri
+  selfLink: /api/v1/namespaces/bgottfri
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
