@@ -1,3 +1,4 @@
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -44,27 +45,6 @@ spec:
       terminationGracePeriodSeconds: 30
 status: {}
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  creationTimestamp: null
-  labels:
-    app: httpd-combined
-  name: httpd-combined
-  namespace: bgottfri
-  selfLink: /api/v1/namespaces/bgottfri/services/httpd-private-repo
-spec:
-  ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: httpd-combined
-  sessionAffinity: None
-  type: ClusterIP
-status:
-  loadBalancer: {}
-----
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
@@ -90,3 +70,24 @@ status:
     - conditions:
       - status: 'True'
         type: Admitted
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: httpd-combined
+  name: httpd-combined
+  namespace: bgottfri
+  selfLink: /api/v1/namespaces/bgottfri/services/httpd-private-repo
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: httpd-combined
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
