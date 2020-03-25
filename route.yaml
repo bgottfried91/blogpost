@@ -7,6 +7,7 @@ metadata:
   labels:
     app: httpd
   name: httpd
+  namespace: bgottfri
   selfLink: /apis/route.openshift.io/v1/namespaces/bgottfri/routes/httpd
 spec:
   host: httpd-bgottfri.apps.cluster-1234-0007.1234-0007.example.opentlc.com

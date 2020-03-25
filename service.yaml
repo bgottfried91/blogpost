@@ -5,6 +5,7 @@ metadata:
   labels:
     app: httpd
   name: httpd
+  namespace: bgottfri
   selfLink: /api/v1/namespaces/bgottfri/services/httpd
 spec:
   ports:
