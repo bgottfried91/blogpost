@@ -4,14 +4,14 @@ metadata:
   creationTimestamp: null
   labels:
     app: httpd
-  name: httpd
+  name: httpd-bad
   namespace: bgottfri
   selfLink: /api/v1/namespaces/bgottfri/services/httpd
 spec:
   ports:
-  - port: 8080
+  - port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80
   selector:
     app: httpd
   sessionAffinity: None
