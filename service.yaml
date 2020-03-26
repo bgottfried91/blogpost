@@ -9,9 +9,9 @@ metadata:
   selfLink: /api/v1/namespaces/bgottfri/services/httpd
 spec:
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
     app: httpd
   sessionAffinity: None
